@@ -1,7 +1,9 @@
 CMAKE_DIR = cmake
-XCODE_DIR = cmake/LIMIT1.xcodeproj
 SCHEME = LIMIT1
 SIMULATOR = generic/platform=iOS Simulator
+
+-include .env
+export
 
 .PHONY: all generate build open clean reset init
 
@@ -15,17 +17,17 @@ generate:
 		-DCMAKE_OSX_ARCHITECTURES=arm64
 
 build:
-	xcodebuild -project $(XCODE_DIR) \
+	xcodebuild -project $(CMAKE_DIR)/$(SCHEME).xcodeproj \
 		-scheme $(SCHEME) \
 		-destination "$(SIMULATOR)" \
 		-configuration Debug \
 		build
 
 open:
-	open $(XCODE_DIR)
+	open $(CMAKE_DIR)/$(SCHEME).xcodeproj
 
 clean:
-	xcodebuild -project $(XCODE_DIR) \
+	xcodebuild -project $(CMAKE_DIR)/$(SCHEME).xcodeproj \
 		-scheme $(SCHEME) \
 		clean
 
