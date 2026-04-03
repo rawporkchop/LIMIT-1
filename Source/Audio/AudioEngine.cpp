@@ -2,7 +2,6 @@
 
 #include "AudioEngine.h"
 
-
 AudioEngine::AudioEngine()
     : AudioProcessor(BusesProperties()
         .withInput ("Input",  juce::AudioChannelSet::stereo(), true)

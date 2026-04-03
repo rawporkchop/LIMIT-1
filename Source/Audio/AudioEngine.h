@@ -3,7 +3,6 @@
 #pragma once
 #include <JuceHeader.h>
 
-
 class AudioEngine : public juce::AudioProcessor
 {
 public:
@@ -15,7 +14,7 @@ public:
     void processBlock(juce::AudioBuffer<float>& buffer,
                       juce::MidiBuffer& midiMessages) override;
 
-    // boilerplate
+    // Required boilerplate
     const juce::String getName() const override { return "LIMIT-1"; }
     bool acceptsMidi() const override { return true; }
     bool producesMidi() const override { return false; }

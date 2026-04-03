@@ -3,7 +3,6 @@
 #include <JuceHeader.h>
 #include "Audio/AudioEngineHost.h"
 
-
 class LIMIT1Application : public juce::JUCEApplication
 {
 public:

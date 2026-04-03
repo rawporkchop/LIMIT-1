@@ -17,6 +17,9 @@ juce_add_gui_app(LIMIT1
 )
 
 set_target_properties(LIMIT1 PROPERTIES
+    XCODE_ATTRIBUTE_SWIFT_OBJC_BRIDGING_HEADER 
+        "${CMAKE_SOURCE_DIR}/Source/Bridge/LIMIT1-Bridging-Header.h"
+    XCODE_ATTRIBUTE_SWIFT_VERSION "5.0"
     XCODE_ATTRIBUTE_DEVELOPMENT_TEAM "$ENV{DEVELOPMENT_TEAM}"
     XCODE_ATTRIBUTE_CODE_SIGN_STYLE "Automatic"
 )
@@ -34,8 +37,8 @@ target_sources(LIMIT1 PRIVATE
 target_compile_definitions(LIMIT1 PUBLIC
     JUCE_WEB_BROWSER=0
     JUCE_USE_CURL=0
+    JUCE_DONT_AUTO_OPEN_MIDI_DEVICES_ON_STARTUP=1
 )
-
 target_link_libraries(LIMIT1 PRIVATE
     juce::juce_audio_utils
     juce::juce_audio_processors

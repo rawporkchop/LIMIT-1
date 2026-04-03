@@ -2,7 +2,6 @@
 
 #include "AudioEngineHost.h"
 
-
 AudioEngineHost::AudioEngineHost()
 {
     deviceManager.addAudioCallback(&player);
