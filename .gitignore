@@ -1,0 +1,35 @@
+# Build Output
+cmake/
+
+# Xcode
+*.xcuserstate
+*.xcworkspace
+xcuserdata/
+DerivedData/
+*.moved-aside
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile.cmake
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Swift Package Manager (if you add any later)
+.build/
+.swiftpm/
+
+# Xcode Previews
+PreviewReplays/
+
+# Credentials / local config
+*.env
+.env.local
